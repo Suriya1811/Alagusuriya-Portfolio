@@ -13,14 +13,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
 
-      - run: npm install
+      - run: npm ci
 
       - run: npm run build
 
-      - uses: peaceiris/actions-gh-pages@v3
+      - run: ls -la dist/
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          path: ./dist
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/deploy-pages@v4
 
