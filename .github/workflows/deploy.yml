@@ -18,13 +18,9 @@ jobs:
 
       - run: npm run build
 
-      - run: ls -la dist/
-
-      - uses: actions/upload-pages-artifact@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./dist
-
-      - uses: actions/configure-pages@v4
-
-      - uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
 
