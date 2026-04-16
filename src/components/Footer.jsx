@@ -1,4 +1,5 @@
-import { Heart, ArrowUp, Mail, Github, Linkedin } from 'lucide-react';
+import { Heart, ArrowUp, Mail } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -19,10 +20,10 @@ export default function Footer() {
               <Mail size={22} />
             </a>
             <a href="https://github.com/Suriya1811" target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:border-white/50 hover:-translate-y-1 transition-all duration-300">
-              <Github size={22} />
+              <FaGithub size={22} />
             </a>
             <a href="https://linkedin.com/in/alagusuriya" target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-white/5 border border-white/10 text-slate-400 hover:text-[#0A66C2] hover:border-[#0A66C2]/50 hover:-translate-y-1 transition-all duration-300">
-              <Linkedin size={22} />
+              <FaLinkedin size={22} />
             </a>
           </div>
         </div>
