@@ -8,7 +8,6 @@ const NAV_LINKS = [
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Education', href: '#education' },
-  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
@@ -40,7 +39,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="#projects"
             className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all text-sm font-medium"
           >
             Hire Me
