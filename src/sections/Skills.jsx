@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 
 const skillsData = {
-  "Languages": ["Java", "Python", "SQL", "JavaScript"],
-  "Frameworks": ["React.js", "Node.js", "PySpark"],
+  "Languages": ["PHP", "Java", "Python", "SQL", "JavaScript"],
+  "Frameworks": ["React.js", "Node.js", "Android SDK", "PySpark"],
   "Databases": ["MySQL", "MongoDB"],
-  "Technologies": ["ETL", "Data Pipelines", "XML", "JSON", "REST APIs"],
-  "Tools": ["Talend", "Git", "GitHub", "Eclipse", "Figma"]
+  "Technologies": ["ETL", "REST APIs", "Data Pipelines", "JSON/XML"],
+  "Tools": ["Talend", "Git", "GitHub", "VS Code", "Figma"]
 };
 
 export default function Skills() {

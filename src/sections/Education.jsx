@@ -1,10 +1,31 @@
 import { motion } from 'framer-motion';
 import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 
+const education = [
+  {
+    degree: "B.E. Computer Science and Engineering",
+    institution: "Anna University (SSMIET)",
+    duration: "Jul 2022 – May 2025",
+    location: "Dindigul, Tamil Nadu",
+    score: "7.0",
+    scoreType: "CGPA",
+    accent: "from-primary to-secondary"
+  },
+  {
+    degree: "Diploma in Mechanical Engineering",
+    institution: "Government Polytechnic College, Coimbatore",
+    duration: "Jul 2019 – May 2022",
+    location: "Coimbatore, Tamil Nadu",
+    score: "72%",
+    scoreType: "Percentage",
+    accent: "from-secondary to-primary"
+  }
+];
+
 export default function Education() {
   return (
-    <section id="education" className="py-24 w-full px-6 flex justify-center border-t border-white/5">
-      <div className="container max-w-3xl">
+    <section id="education" className="py-24 w-full px-6 flex justify-center border-t border-white/5 bg-darker">
+      <div className="container max-w-4xl">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -12,58 +33,68 @@ export default function Education() {
             viewport={{ once: true }}
             className="inline-block"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Education</h2>
-            <div className="w-1/2 h-1 bg-primary mx-auto rounded-full"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Education</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            <p className="mt-6 text-slate-400 max-w-xl mx-auto text-lg">
+              Education is not only about learning facts, but more about training the mind to think.
+            </p>
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="glass-card p-8 md:p-10 relative overflow-hidden group"
-        >
-          {/* Decorative accent */}
-          <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-primary to-secondary"></div>
-          
-          <div className="flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
-            <div className="flex gap-6 items-start">
-              <div className="hidden md:flex w-16 h-16 rounded-full bg-primary/10 items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:scale-110">
-                <GraduationCap size={32} />
-              </div>
+        <div className="space-y-8">
+          {education.map((edu, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="glass-card p-8 md:p-10 relative overflow-hidden group hover:border-primary/30 transition-all duration-300"
+            >
+              <div className={`absolute top-0 left-0 w-2 h-full bg-gradient-to-b ${edu.accent}`}></div>
               
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">B.E. Computer Science and Engineering</h3>
-                <h4 className="text-lg text-primary font-medium mb-4 flex items-center md:hidden gap-2">
-                  <GraduationCap size={20} className="inline" /> 
-                  Anna University (SSMIET)
-                </h4>
-                <h4 className="text-lg text-primary font-medium mb-4 hidden md:block">
-                  Anna University (SSMIET)
-                </h4>
-                
-                <div className="flex flex-col sm:flex-row gap-4 text-slate-400 text-sm">
-                  <div className="flex items-center gap-2">
-                    <Calendar size={16} />
-                    <span>Jul 2022 – May 2025</span>
+              <div className="flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
+                <div className="flex gap-8 items-start">
+                  <div className="hidden md:flex w-20 h-20 rounded-2xl bg-white/5 border border-white/10 items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-xl">
+                    <GraduationCap size={40} />
                   </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin size={16} />
-                    <span>Dindigul, Tamil Nadu</span>
+                  
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors leading-tight">
+                      {edu.degree}
+                    </h3>
+                    
+                    <h4 className="text-xl text-primary font-medium mb-4">
+                      {edu.institution}
+                    </h4>
+                    
+                    <div className="flex flex-wrap gap-6 text-slate-400 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Calendar size={18} className="text-secondary" />
+                        <span>{edu.duration}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin size={18} className="text-secondary" />
+                        <span>{edu.location}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 md:mt-0 self-center md:self-auto">
+                  <div className="flex flex-col items-center justify-center w-28 h-28 rounded-full border-4 border-white/5 bg-darker/80 group-hover:border-primary/50 transition-all duration-500 shadow-2xl">
+                    <span className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
+                      {edu.score}
+                    </span>
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mt-1">
+                      {edu.scoreType}
+                    </span>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-4 md:mt-0 flex-shrink-0">
-              <div className="flex flex-col items-center justify-center w-24 h-24 rounded-full border-4 border-white/5 bg-darker/50 group-hover:border-secondary/50 transition-colors">
-                <span className="text-3xl font-bold text-secondary">7.0</span>
-                <span className="text-xs text-slate-400 font-medium uppercase tracking-wider">CGPA</span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

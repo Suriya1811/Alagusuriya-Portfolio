@@ -7,11 +7,11 @@ const experiences = [
     company: "Mahix Infotech",
     duration: "Jan 2026 – Present",
     points: [
-      "Developed 3+ production-ready applications using MERN, PHP, MySQL",
-      "Built Room Booking System improving efficiency by 30%",
-      "Created E-commerce platform with secure payments",
-      "Developed Retail Management System with GST and inventory tracking",
-      "Optimized APIs and database queries"
+      "Engineered a real-time Election Booth Monitoring System with live police tracking and dynamic officer assignment.",
+      "Architected a centralized Institute ERP platform managing institutional workflows, student data, and automated reporting.",
+      "Developed a production-grade Hotel POS system with real-time order tracking and automated invoice generation.",
+      "Built a Movie Ticket Booking platform with concurrent booking logic and responsive seat selection interface.",
+      "Designed and optimized scalable REST APIs and database structures for multi-platform delivery (Web + Mobile)."
     ]
   },
   {
