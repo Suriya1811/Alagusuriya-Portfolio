@@ -28,7 +28,7 @@ const projects = [
       "Scalable database structure",
       "Comprehensive reporting"
     ],
-    live: "https://mahixinfotech.in/erp"
+    live: "https://institute.mahixinfotech.in/erp"
   },
   {
     title: "Movie Ticket Booking System",
@@ -42,7 +42,7 @@ const projects = [
       "Concurrent booking logic",
       "Responsive user interface"
     ],
-    live: "https://mahixinfotech.in/ticket"
+    live: "http://mahixinfotech.in/Ticketbooking/user/index.php"
   },
   {
     title: "Hotel POS (Point of Sale) System",
@@ -56,7 +56,7 @@ const projects = [
       "Optimized backend logic",
       "Staff workflow automation"
     ],
-    live: "#"
+    live: "https://hotelpostool.vercel.app"
   },
   {
     title: "Startup Investor Platform",
@@ -106,7 +106,7 @@ export default function Projects() {
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -114,14 +114,14 @@ export default function Projects() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {projects.map((project, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               variants={cardVariants}
               whileHover={{ y: -10 }}
               className="glass-card group flex flex-col h-full overflow-hidden border-white/10 hover:border-primary/50 transition-all duration-300 relative"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-              
+
               <div className="p-8 pb-4 flex justify-between items-start">
                 <div className="p-3 bg-white/5 rounded-xl group-hover:bg-primary/10 transition-colors">
                   {project.icon}
@@ -136,7 +136,7 @@ export default function Projects() {
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-primary transition-colors leading-tight">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-slate-400 leading-relaxed mb-6 font-light text-sm">
                   {project.description}
                 </p>
@@ -160,9 +160,9 @@ export default function Projects() {
 
                 <div className="pt-6 border-t border-white/5 mt-auto flex justify-between items-center">
                   {project.live !== "#" ? (
-                    <a 
-                      href={project.live} 
-                      target="_blank" 
+                    <a
+                      href={project.live}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-white transition-colors group/link"
                     >
