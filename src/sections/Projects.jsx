@@ -28,7 +28,7 @@ const projects = [
       "Scalable database structure",
       "Comprehensive reporting"
     ],
-    live: "https://institute.mahixinfotech.in/erp"
+    live: "https://institute.mahixinfotech.in/erp/public_html/index.php"
   },
   {
     title: "Movie Ticket Booking System",
@@ -42,7 +42,7 @@ const projects = [
       "Concurrent booking logic",
       "Responsive user interface"
     ],
-    live: "http://mahixinfotech.in/Ticketbooking/user/index.php"
+    live: "https://mahixinfotech.in/Ticketbooking/login.php"
   },
   {
     title: "Hotel POS (Point of Sale) System",
